@@ -1,0 +1,25 @@
+az vm create \
+    --resource-group copenwobc255a00222 \
+    --name PS-VM \
+    --image Win2019Datacenter \
+    --public-ip-sku Standard \
+    --admin-username xadmin \
+    --admin-password Pa55w.rdPa55w.rd
+
+New-AzVm `
+    -ResourceGroupName 'copenwobc255a00222' `
+    -Name 'PS-VM' `
+    -Location 'East US' `
+    -VirtualNetworkName 'myVnet' `
+    -SubnetName 'mySubnet' `
+    -SecurityGroupName 'myNetworkSecurityGroup' `
+    -PublicIpAddressName 'myPublicIpAddress' `
+    -OpenPorts 80,3389
+
+https://copenwobc255akeyvault.vault.azure.net/secrets/AzureVM--copen/f8f82db9fb25416cbebdb2d56eb50899
+
+connection String
+BlobEndpoint=https://copenwobc255astorage.blob.core.windows.net/;QueueEndpoint=https://copenwobc255astorage.queue.core.windows.net/;FileEndpoint=https://copenwobc255astorage.file.core.windows.net/;TableEndpoint=https://copenwobc255astorage.table.core.windows.net/;SharedAccessSignature=sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-04-12T23:36:34Z&st=2022-04-12T15:36:34Z&spr=https&sig=iijyHNt8wD8nl3H0vwKo2fydQmsxxcFqVHqV9yMW2ZE%3D
+
+SAS Token
+?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-04-12T23:36:34Z&st=2022-04-12T15:36:34Z&spr=https&sig=iijyHNt8wD8nl3H0vwKo2fydQmsxxcFqVHqV9yMW2ZE%3D
